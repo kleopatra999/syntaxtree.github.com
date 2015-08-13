@@ -1,0 +1,31 @@
+---
+layout: nil
+---
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+  <title>SyntaxTree</title>
+  <link href="http://syntaxtree.com/blog/"/>
+  <link type="application/atom+xml" rel="self" href="http://syntaxtree.com/blog/atom.xml"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>http://syntaxtree.com/blog/</id>
+  <author>
+    <name>SyntaxTree</name>
+    <email>info@syntaxtree.com</email>
+  </author>
+
+  {% for post in site.posts %}
+  <entry>
+    <id>http://syntaxtree.com/blog{{ post.id }}</id>
+    <link type="text/html" rel="alternate" href="http://syntaxtree.com/blog{{ post.url }}"/>
+    <title>{{ post.title }}</title>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <author>
+      <name>SyntaxTree</name>
+      <uri>http://syntaxtree.com/blog/</uri>
+    </author>
+    <content type="html">{{ post.content | xml_escape }}</content>
+  </entry>
+  {% endfor %}
+ 
+</feed>

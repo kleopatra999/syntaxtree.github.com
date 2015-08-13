@@ -1,0 +1,24 @@
+---
+layout: post
+title: C# FastSpring API
+---
+<p>
+We're currently happily relying on <a href="http://www.fastspring.com">FastSpring</a> to handle transactions for <a href="http://unityvs.com" target="_blank">UnityVS</a>. As advertised, we've experienced great customer support.
+</p>
+
+<p>
+Whenever you purchase UnityVS through FastSpring, it will request licenses and notify our system of different events, such as new orders for instances.
+</p>
+
+<p>
+Today we're opening the code of two libraries that we've using to interact with FastSpring:
+</p>
+
+<ul>
+	<li><a href="http://github.com/syntaxtree/SyntaxTree.FastSpring" target="_blank">SyntaxTree.FastSpring</a>: A library to validate the license requests the and different notifications that FastSpring performs.</li>
+	<li><a href="http://github.com/syntaxtree/SyntaxTree.FastSpring.Api" target="_blank">SyntaxTree.FastSpring.Api</a>: A library to query the REST API that FastSpring exposes, currently limited to the scope of that we're using.</li>
+</ul>
+
+<p>
+Both are licensed under the permissive MIT/X11 license. We hope you'll find them useful.
+</p>

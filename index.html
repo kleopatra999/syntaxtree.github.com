@@ -1,0 +1,16 @@
+---
+layout: default
+title: Home
+---
+
+{% assign first_post = site.posts.first %}
+
+<div class="container">
+  <div class="hero-unit">
+    <h1>{{ first_post.title }}</h1>
+    <br><br>
+	<p>July 2nd 2014</p>
+	<br>
+    <p>{{ first_post.content }}</p>
+  </div>
+</div>
